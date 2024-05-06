@@ -75,10 +75,10 @@ function setTile() {
     
     
     //check winner
-    checkWinner(); 
-    checkNoWinner();
-    if(gameOver){
-        return;
+    
+    if(checkWinner() || checkNoWinner()){
+      gameOver=true;
+      return;
     }
     
     //set random tile
@@ -130,8 +130,7 @@ function checkWinner() {
                 let tile = document.getElementById(r.toString() + "-" + i.toString());
                 tile.classList.add("winner");
             }
-            gameOver = true;
-            return;
+            return true;
         }
     }
 
@@ -144,8 +143,7 @@ function checkWinner() {
                 let tile = document.getElementById(i.toString() + "-" + c.toString());                
                 tile.classList.add("winner");
             }
-            gameOver = true;
-            return;
+            return true;
         }
     }
 
@@ -155,8 +153,7 @@ function checkWinner() {
             let tile = document.getElementById(i.toString() + "-" + i.toString());                
             tile.classList.add("winner");
         }
-        gameOver = true;
-        return;
+        return true;
     }
 
     //anti-diagonally
@@ -172,8 +169,7 @@ function checkWinner() {
         //2-0
         tile = document.getElementById("2-0");                
         tile.classList.add("winner");
-        gameOver = true;
-        return;
+        return true;
     }
 }
 function checkNoWinner(){
@@ -185,18 +181,17 @@ function checkNoWinner(){
         }
 
     if(filledCell==9){
-        gameOver=true;   
-        winCount=0;
+        //winCount=0;
+      return true;
     }    
-    else
-    gameOver=false;
-    return;
+    else 
+      return false;
 }
-function consWins(typeOfWinn){
+/*function consWins(typeOfWinn){
     if(typeOfWinn==currPlayer)
     window.localStorage.getItem("winCount",winCount)++;
     else
     window.localStorage.getItem("winCount",winCount)=0;
     document.getElementById('winCount').innerHTML=window.localStorage.getItem("winCount",winCount);
     return;
-}
+}*/
