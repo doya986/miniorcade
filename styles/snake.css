@@ -2,10 +2,9 @@ body {
    font-family:orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    text-align: center;
    text-transform: capitalize;
-   min-width:1000;
+   min-width:max-content;
 }
 #board{
-   display:inline-block;
    border: 5px inset rgb(0, 0, 0);
 }
 #instruct{
