@@ -75,12 +75,12 @@ function setTile() {
     
     
     //check winner
-    if (checkWinner() || checkNoWinner()){
+    checkWinner(); 
+    checkNoWinner();
+  
+    if(gameOver){
         return;
     }
-    /*if(gameOver){
-        return;
-    }*/
     
     //set random tile
     botSetTile();
