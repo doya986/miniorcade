@@ -6,6 +6,9 @@
     letter-spacing: 1px;
     cursor: default;
 }
+a:link{
+    color:#000000;
+}    
 button{
     cursor:pointer;
 }
