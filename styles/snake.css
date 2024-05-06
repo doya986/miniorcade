@@ -2,7 +2,7 @@ body {
    font-family:orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    text-align: center;
    text-transform: capitalize;
-   min-width:500px;
+   min-width:500;
 }
 #board{
    border: 5px inset rgb(0, 0, 0);
