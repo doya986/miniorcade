@@ -77,7 +77,6 @@ function setTile() {
     //check winner
     checkWinner(); 
     checkNoWinner();
-  
     if(gameOver){
         return;
     }
@@ -88,7 +87,8 @@ function setTile() {
 }
 
 function botSetTile(){
-
+    if(gameOver)
+       return;
     
     randomTile=selectRandomTile();
     let coords = randomTile.id.split("-"); //ex) "1-2" -> ["1", "2'"]
@@ -105,10 +105,11 @@ function botSetTile(){
 
     //check winner
     checkWinner();
+    checkNoWinner();
     if(gameOver){
         return;
     }
-    checkNoWinner();
+    
     return;
 }
 function selectRandomTile(){
