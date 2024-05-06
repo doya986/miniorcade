@@ -5,6 +5,7 @@ body {
    min-width:1000;
 }
 #board{
+   display:inline-block;
    border: 5px inset rgb(0, 0, 0);
 }
 #instruct{
