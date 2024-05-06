@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/xo.css" type="text/css">
+    <link rel="stylesheet" href="styles/homepage.css" type="text/css">
+</head>
+<body>
+    <div class="top-bar">
+        <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
+        
+        <div id="confirm">
+            <button id="back" class="yes">x</button>    
+            <div class="message">Select a Game</div>
+            <a href="miniotetris.html" target="_self">
+                <button id="menu-tetris" class="yes">
+                    <!--<img class="icons" src="styles/resources/tetrisicon.jpg">-->
+                    tetris</button></a>
+            <br /><a href="miniobrickbreaker.html" target="_self">
+                <button id="menu-brick-breaker" class="yes">
+                    break out</button></a>
+            <br /><a href="minioxo.html" target="_self">
+                <button id="menu-tictactoe" class="yes">
+                    tictactoe</button></a>
+            <br /><a href="miniosnake.html" target="_self">
+                <button id="menu-snake" class="yes">
+                    snake</button></a>
+            <br /><a href="miniospaceinvaders.html" target="_self">
+                <button id="menu-space-invaders" class="yes">
+                    space invaders</button></a>
+            <br />
+        </div>
+        <a href="Homepage.html">
+            <button id="home-button" class="top-bar-buttons"></button></a>
+        <a href="accountpage.html" target="_self">
+            <button id="account-button" class="top-bar-buttons"></button></a>
+        <hr />    
+    </div>
+    <h1>Tic Tac Toe</h1>
+    <br />
+    <!-- 3x3 -->
+    <div id="board"></div>
+    <div>
+        <p id="wins">
+            wins in a row: <span id="winCount">
+                0
+            </span>
+        </p>
+    </div>
+    <script src="script/xo.js"></script>
+    <script src="script/homepage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

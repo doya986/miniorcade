@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>miniorcade/account</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/accountpage.css" type="text/css">  
+        <link rel="stylesheet" href="styles/homepage.css" type="text/css">
+    </head>
+    <body>
+        
+        <div class="top-bar">
+            <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
+            
+            <div id="confirm">
+                <button id="back" class="yes">x</button>    
+                <div class="message">Select a Game</div>
+                <a href="miniotetris.html" target="_self">
+                    <button id="menu-tetris" class="yes">
+                        <!--<img class="icons" src="styles/resources/tetrisicon.jpg">-->
+                        tetris</button></a>
+                <br /><a href="miniobrickbreaker.html" target="_self">
+                    <button id="menu-brick-breaker" class="yes">
+                        break out</button></a>
+                <br /><a href="minioxo.html" target="_self">
+                    <button id="menu-tictactoe" class="yes">
+                        tictactoe</button></a>
+                <br /><a href="miniosnake.html" target="_self">
+                    <button id="menu-snake" class="yes">
+                        snake</button></a>
+                <br /><a href="miniospaceinvaders.html" target="_self">
+                    <button id="menu-space-invaders" class="yes">
+                        space invaders</button></a>
+                <br />
+            </div>
+            <a href="Homepage.html">
+                <button id="home-button" class="top-bar-buttons"></button></a>
+            <a href="accountpage.html" target="_self">
+                <button id="account-button" class="top-bar-buttons"></button></a>
+            <hr />
+        </div>
+        <h1>your account</h1>
+        <h6>(not yet functional)</h6>
+        <div id="milestones">
+            <h2>game milestones</h2>
+            <h4>tetris: <p onload="getTetrisScore()">0 points</p><br />
+                break-out:<p onload="getBOScore()">0 points</p><br />
+                tictactoe:<p onload="getXOWins()">0 win streaks</p><br />
+                snake:<p onload="getSnakeScore()">0 points</p><br />
+                spase invaders:<p onload="getSIScore()">0 points</p>
+            </h4>
+        </div>
+        <script src="script/account.js"></script>
+        <script src="script/homepage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>            
+    </body>
+</html>

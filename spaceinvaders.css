@@ -1,0 +1,50 @@
+body {
+    font-family:orbitron,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#board {
+    background-color: black;
+    margin-bottom: 10px;
+}
+#buttonBoard{
+    background-color: #ffffff;
+}
+button{
+    text-transform: capitalize;
+    padding: 30px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+#shoot{
+    background-image: url(resources/firebutton.jpg);
+    padding: 50px;
+    transition: backgroumd-image 0.2s;
+}
+#shoot:active{
+    background-image: url(resources/firebuttonclicked.jpg);
+}
+#left{
+    background-image: url(resources/left2.jpg);
+}
+#right{
+    background-image: url(resources/right2.jpg);
+}
+#start{
+    border: 4px rgb(126, 126, 126) outset;
+    box-shadow: 3px 2px 5px #8f8f8f;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 10pt;
+    font-family: orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 40px;
+    margin-right: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
