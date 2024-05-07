@@ -10,10 +10,10 @@
         <link rel="stylesheet" href="styles/homepage.css" type="text/css">
     </head>
     <body>
-        <div class="top-bar">
+        <header class="top-bar">
             <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
             
-            <div id="confirm">
+            <nav id="confirm">
                 <button id="back" class="yes">x</button>    
                 <div class="message">Select a Game</div>
                 <a href="miniotetris.html" target="_self">
@@ -33,16 +33,17 @@
                     <button id="menu-space-invaders" class="yes">
                         space invaders</button></a>
                 <br />
-            </div>
+            </nav>
             <a href="Homepage.html"><button id="home-button" class="top-bar-buttons"></button></a>
             <a href="accountpage.html" target="_self"><button id="account-button" class="top-bar-buttons"></button></a>
             <hr />
-        </div>
+        </header>
+        <main>
         <h1>tetris</h1>
         <p>click buttons below or the arrows on your keyboard to move and rotate</p>
         <div id="left-div"></div>
         <canvas width="320" height="640" id="game"></canvas>
-        <div>
+        <nav>
             <button id="left" class="direct-button" onclick="goLeft()">
             </button>
             <button id="up" class="direct-button" onclick="clickRotate()">
@@ -52,7 +53,8 @@
             </button>
             <button id="right" class="direct-button" onclick="goRight()">
             </button>
-        </div>
+        </nav>
+        </main>
         <script src="script/tetris3.js"></script>        
         <script src="script/homepage.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
