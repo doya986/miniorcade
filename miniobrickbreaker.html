@@ -12,10 +12,10 @@
     </head>
 
     <body>
-        <div class="top-bar">
+        <header class="top-bar">
             <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
             
-            <div id="confirm">
+            <nav id="confirm">
                 <button id="back" class="yes">x</button>    
                 <div class="message">Select a Game</div>
                 <a href="miniotetris.html" target="_self">
@@ -35,14 +35,12 @@
                     <button id="menu-space-invaders" class="yes">
                         space invaders</button></a>
                 <br />
-            </div>
-
-            <a href="Homepage.html">
-                <button id="home-button" class="top-bar-buttons"></button></a>
-            <a href="accountpage.html" target="_self">
-                <button id="account-button" class="top-bar-buttons"></button></a>
-            <hr>
-        </div>
+            </nav>
+            <a href="Homepage.html"><button id="home-button" class="top-bar-buttons"></button></a>
+            <a href="accountpage.html" target="_self"><button id="account-button" class="top-bar-buttons"></button></a>
+            <hr />
+        </header>
+        <main>
         <h1>Breakout</h1>
         <p>click the buttons below or the arrows on your keyboard to move</p>
         <canvas id="board"></canvas><br />
@@ -51,6 +49,7 @@
             <button id="start-button" onclick="restart()">start</button>
             <button id="right-button" onclick="moveRight()"></button>
         </div>
+        </main>
         <script src="script/brickbreaker.js"></script>
         <script src="script/homepage.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
