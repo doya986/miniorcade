@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="styles/homepage.css" type="text/css">
     </head>
     <body>
-        <div class="top-bar">
+        <header class="top-bar">
             <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
             
-            <div id="confirm">
+            <nav id="confirm">
                 <button id="back" class="yes">x</button>    
                 <div class="message">Select a Game</div>
                 <a href="miniotetris.html" target="_self">
@@ -34,26 +34,25 @@
                     <button id="menu-space-invaders" class="yes">
                         space invaders</button></a>
                 <br />
-            </div>
-            <a href="Homepage.html">
-                <button id="home-button" class="top-bar-buttons"></button></a>
-            <a href="accountpage.html" target="_self">
-                <button id="account-button" class="top-bar-buttons"></button></a>
+            </nav>
+            <a href="Homepage.html"><button id="home-button" class="top-bar-buttons"></button></a>
+            <a href="accountpage.html" target="_self"><button id="account-button" class="top-bar-buttons"></button></a>
             <hr />
-        </div>
+        </header>
+        <main>
         <h1>Space Invaders</h1>
         <p>
             press arrows on your keyboard/buttons below to move <br />
             press space/shoot button to shoot
         </p>
         <canvas id="board"></canvas>
-        <div id="buttonBoard">
+        <nav id="buttonBoard">
             <button id="shoot" onclick="clickShoot()"></button>
             <button id="start" onclick="restartGame()">start</button>            
             <button id="left" class="direct" onclick="moveLeft()"></button>
             <button id="right" class="direct" onclick="moveRight()"></button>
-            
-        </div>
+        </nav>
+        </main>
         <script src="script/spaceinvaders.js"></script>
         <script src="script/homepage.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
