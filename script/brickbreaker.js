@@ -54,7 +54,7 @@ window.onload = function() {
     context = board.getContext("2d"); //used for drawing on the board
 
     //draw initial player
-    context.fillStyle="skyblue";
+    context.fillStyle="white";
     context.fillRect(player.x, player.y, player.width, player.height);
 
     requestAnimationFrame(update);
