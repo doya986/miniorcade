@@ -12,10 +12,10 @@
     </head>
 
     <body>
-        <div class="top-bar">
+        <header class="top-bar">
             <button id="games-button" class="top-bar-buttons" onclick="pop()"></button>
             
-            <div id="confirm">
+            <nav id="confirm">
                 <button id="back" class="yes">x</button>    
                 <div class="message">Select a Game</div>
                 <a href="miniotetris.html" target="_self">
@@ -35,13 +35,12 @@
                     <button id="menu-space-invaders" class="yes">
                         space invaders</button></a>
                 <br />
-            </div>
-            <a href="Homepage.html">
-                <button id="home-button" class="top-bar-buttons"></button></a>
-            <a href="accountpage.html" target="_self">
-                <button id="account-button" class="top-bar-buttons"></button></a>
+            </nav>
+            <a href="Homepage.html"><button id="home-button" class="top-bar-buttons"></button></a>
+            <a href="accountpage.html" target="_self"><button id="account-button" class="top-bar-buttons"></button></a>
             <hr />
-        </div>
+        </header>
+        <main>
         <h1>Snake</h1>
         <p id="instruct">click on buttons below or the 
             arrows on your keyboard to move the snake</p>
@@ -51,7 +50,7 @@
             <div class="message">Game Over</div>
             <button id="reset" class="button" onclick="resetGame()">reset game</button>
         </div>
-        <div>
+        <nav>
             <button id="left" class="direction-button" onclick="goLeft()">
             </button>
             <button id="up" class="direction-button" onclick="goUp()">
@@ -61,7 +60,8 @@
             </button>
             <button id="right" class="direction-button" onclick="goRight()">
             </button>
-        </div>
+        </nav>
+        </main>
         <script src="script/snake.js"></script>
         <script src="script/homepage.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
