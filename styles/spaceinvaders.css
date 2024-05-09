@@ -36,7 +36,7 @@ button{
     background-image: url(resources/right2.jpg);
 }
 #left:active, #right:active{
-    padding:25px;
+    padding:28px;
     border: 2px inset rgba(10, 10, 10, 0.2);
 }
 #start{
