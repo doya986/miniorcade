@@ -22,7 +22,11 @@ body {
     font-size: 150px;
     display: flex;
     justify-content: center; 
-    align-items: center;    
+    align-items: center;
+    transition:all 0.1s;
+}
+.tile:hover{
+    background-color:#111111;
 }
 
 .winner {
