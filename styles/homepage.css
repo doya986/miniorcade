@@ -74,7 +74,7 @@ hr{
 }
 .yes:active{
     border: 3px inset #aaa;
-    width: 175px;
+    /*width: 175px;*/
 }
 #confirm .message {
     margin-bottom: 5%;
