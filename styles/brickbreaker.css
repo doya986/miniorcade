@@ -18,7 +18,7 @@ body {
     border: none;
     /*border: 3px outset black;*/
     margin-top: 20px;
-    transition:all 0.2s;
+    transition:all 0.6ms;
 }
 #left-button{
     background-image: url(resources/left2.jpg);
