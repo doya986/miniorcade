@@ -16,7 +16,7 @@ body {
 .tile {
     width: 147px;
     height: 147px;
-    
+    cursor:pointer;
     /* Text */ 
     color: #ffffff;
     font-size: 150px;
