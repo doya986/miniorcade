@@ -19,6 +19,12 @@ canvas {
   background-size: contain;
   padding-left: 45px;
   padding-top: 50px;
+  transition:all 0.1s;
+}
+.direct-button:active{
+  padding-left:43px;
+  padding-top:48px;
+  border: 2px inset rgba(10, 10, 10, 0.2);
 }
 #up{
   background-image: url(resources/up2.jpg);
