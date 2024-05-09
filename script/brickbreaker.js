@@ -246,6 +246,7 @@ function resetGame() {
     }
     blockArray = [];
     blockRows = 3;
+    setBOScore(score);
     score = 0;
     createBlocks();
 }
