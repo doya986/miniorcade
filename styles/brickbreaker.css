@@ -48,6 +48,10 @@ body {
     margin-left: 100px;
     margin-right: 100px;
 }
+#start-button:active{
+    border: 3px inset rgb(142,142,142);
+    padding:8px;
+}
 /*#start-button{
     background-image: url(resources/start2.jpg);
     padding-left: 125px;
@@ -55,4 +59,4 @@ body {
     padding-bottom: 15px;
     margin-left: 100px;
     margin-right: 100px;
-}
+}*/
