@@ -19,7 +19,7 @@ button{
     background-size: contain;
     border: none;
     cursor: pointer;
-    transition:all 0.4s;
+    transition:all 0.1s;
 }
 #shoot{
     background-image: url(resources/firebutton.jpg);
