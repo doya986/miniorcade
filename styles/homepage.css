@@ -67,15 +67,26 @@ hr{
     text-transform: capitalize;
     box-shadow: 3px 2px 5px #2a2a2a;
     cursor: pointer;
-    
- }
+    transition:all 0.2s;
+}
+.yes:hover{
+    width: 180px;
+}
+.yes:active{
+    border: 3px inset #aaa;
+    width: 175px;
+}
 #confirm .message {
     margin-bottom: 5%;
- }
- #back{
+}
+#back{
     width: 50px;
     margin-bottom: 10px;
- }
+}
+#back:active{
+    border: 3px inset #aaa;
+    width: 49px;
+}
 #account-button{
     background-image: url(resources/accountbutton1.jpeg);
     padding: 20px;
