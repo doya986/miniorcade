@@ -19,6 +19,10 @@ button{
     background-size: contain;
     border: none;
     cursor: pointer;
+    transition:all 0.4s;
+}
+button:active{
+    padding:25px;
 }
 #shoot{
     background-image: url(resources/firebutton.jpg);
@@ -35,7 +39,7 @@ button{
     background-image: url(resources/right2.jpg);
 }
 #start{
-    border: 4px rgb(126, 126, 126) outset;
+    border: 3px rgb(126, 126, 126) outset;
     box-shadow: 3px 2px 5px #8f8f8f;
     text-align: center;
     text-transform: uppercase;
@@ -47,4 +51,8 @@ button{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+}
+#start:active{
+    border: 3px inset rgb(126, 126, 126);
+    padding:8px;
 }
