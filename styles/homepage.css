@@ -86,6 +86,9 @@ hr{
     background-size:cover;
     padding: 125px;
 }
+.games:hover{
+    padding:120px;
+}
 #tetris{
     background-image: url(resources/tetrisbutton.jpg);
 }
