@@ -26,19 +26,24 @@ body {
    text-shadow: #000000;
 }
 #gameover button {
+   font-family: orbitron ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 13px;
    background-color: #9e9e9e;
    display: inline-block;
    border: 3px outset #aaa;
-   padding: 5px;
+   padding: 8px;
    margin-bottom: 15px;
-   width: 30px;
    font-weight: bolder;
    text-align: center;
    text-transform: capitalize;
    cursor: pointer;
+   transition: border padding 0.3s;
+}
+#gameover button:active{
+   border: 3px inset #aaa;
+   padding: 7px;
 }
 #gameover #reset{
-   width: 95px;
    margin-bottom: none;
    margin-top: 15px;
 }
@@ -53,6 +58,12 @@ body {
    background-size: contain;
    padding-left: 45px;
    padding-top: 50px;
+   transition: padding-left padding-top border 0.3s;
+}
+.direction-button:active{
+   padding-left: 43px;
+   padding-top: 48px;
+    border: 2px inset rgba(10, 10, 10, 0.2);
 }
 #up{
    background-image: url(resources/up2.jpg);
