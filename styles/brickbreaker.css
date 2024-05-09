@@ -50,7 +50,6 @@ body {
 }
 #start-button:active{
     border: 3px inset rgb(142,142,142);
-    padding:8px;
 }
 /*#start-button{
     background-image: url(resources/start2.jpg);
