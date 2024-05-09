@@ -21,9 +21,6 @@ button{
     cursor: pointer;
     transition:all 0.4s;
 }
-button:active{
-    padding:25px;
-}
 #shoot{
     background-image: url(resources/firebutton.jpg);
     padding: 50px;
@@ -37,6 +34,10 @@ button:active{
 }
 #right{
     background-image: url(resources/right2.jpg);
+}
+#left:active, #right:active{
+    padding:25px;
+    border: 2px inset rgba(10, 10, 10, 0.2);
 }
 #start{
     border: 3px rgb(126, 126, 126) outset;
