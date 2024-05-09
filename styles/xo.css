@@ -26,14 +26,17 @@ body {
     transition:all 0.1s;
 }
 .tile:hover{
-    background-color:#111111;
+    background-color:#333333;
 }
 
 .winner {
     background-color: rgb(172, 172, 172);
     color: red;
+    transition:all 0.1s;
 }
-
+.winner:hover{
+    background-color: rgb(182, 182, 182);
+}
 
 .horizontal-line {
     border-bottom: 3px solid rgb(255, 255, 255);
