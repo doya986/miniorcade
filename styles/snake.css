@@ -37,7 +37,7 @@ body {
    text-align: center;
    text-transform: capitalize;
    cursor: pointer;
-   transition: border padding 0.3s;
+   transition: all 0.1s;
 }
 #gameover button:active{
    border: 3px inset #aaa;
