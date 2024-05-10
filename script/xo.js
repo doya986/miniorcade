@@ -16,9 +16,13 @@ var playerX = "X";
 var XorO=[playerX,playerO];
 var currPlayer= XorO[Math.floor(Math.random()*XorO.length)];;//to give random letter to user
 var botPlayer;
-var winCount=0;
-window.localStorage.setItem("winCount",winCount);
+//var winCount=localStorage.setItem("winCount","0");
+if(localStorage.getItem("wins") =="0" || localStorage.getItem("wins")==null)
+    localStorage.setItem("wins","0");
 
+var wins= parseInt(localStorage.getItem("wins"));
+var p=document.getElementById("wins");
+    p.innerText= localStorage.getItem("wins");
 var gameOver = false;
 
 window.onload = setGame();
@@ -51,7 +55,6 @@ function setGame() {
 
 function setTile() {
     if (gameOver) {
-        //consWins();
         location.reload();
         return;
     }
@@ -104,9 +107,8 @@ function botSetTile(){
     randomTile.innerText=botPlayer;
 
     //check winner
-    checkWinner();
-    checkNoWinner();
-    if(gameOver){
+    if(checkWinner() || checkNoWinner()){
+        gameOver=true;
         return;
     }
     
@@ -130,6 +132,7 @@ function checkWinner() {
                 let tile = document.getElementById(r.toString() + "-" + i.toString());
                 tile.classList.add("winner");
             }
+            consWins(board[r][0]);
             return true;
         }
     }
@@ -143,6 +146,7 @@ function checkWinner() {
                 let tile = document.getElementById(i.toString() + "-" + c.toString());                
                 tile.classList.add("winner");
             }
+            consWins(board[0][c]);
             return true;
         }
     }
@@ -153,6 +157,7 @@ function checkWinner() {
             let tile = document.getElementById(i.toString() + "-" + i.toString());                
             tile.classList.add("winner");
         }
+        consWins(board[0][0]);
         return true;
     }
 
@@ -169,6 +174,8 @@ function checkWinner() {
         //2-0
         tile = document.getElementById("2-0");                
         tile.classList.add("winner");
+
+        consWins(board[0][2]);
         return true;
     }
 }
@@ -187,11 +194,14 @@ function checkNoWinner(){
     else 
       return false;
 }
-/*function consWins(typeOfWinn){
-    if(typeOfWinn==currPlayer)
-    window.localStorage.getItem("winCount",winCount)++;
-    else
-    window.localStorage.getItem("winCount",winCount)=0;
-    document.getElementById('winCount').innerHTML=window.localStorage.getItem("winCount",winCount);
+function consWins(typeOfWin){
+    if(typeOfWin==currPlayer){
+        ++wins;
+        localStorage.setItem("wins", wins.toString());
+    }
+    else if(typeOfWin==botPlayer){
+        localStorage.setItem("wins","0");
+    }
+  
     return;
-}*/
+}
