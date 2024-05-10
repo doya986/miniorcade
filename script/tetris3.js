@@ -7,6 +7,9 @@
 
 // get a random integer between the range of [min,max]
 var score=0;
+if(localStorage.getItem("tetrisScore")==0 || localStorage.getItem("tetrisScore")==null){
+  localStorage.setItem("tetrisScore","0");
+}
 
 
 function getRandomInt(min, max) {
@@ -131,8 +134,9 @@ function getRandomInt(min, max) {
     context.textBaseline = 'middle';
     context.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2);
     context.fillText("press 'Space' to restart", canvas.width / 2, (canvas.height / 2)+20);
-
-    window.localStorage.setItem('tetrisScore',score.toString());
+    if(score>parseInt(localStorage.getItem("tetrisScore"))){
+      window.localStorage.setItem('tetrisScore',score.toString());
+    }
   }
   
   const canvas = document.getElementById('game');
