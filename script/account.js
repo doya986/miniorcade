@@ -4,7 +4,7 @@ var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
 var BOScore=0;
 var newBOScore=parseInt(localStorage.getItem('BOscore'));
 var XOStreak=0;
-var newXOStreak=parseInt(localStorage.getItem('winStrteak'));
+var newXOStreak=parseInt(localStorage.getItem('wins'));
 var snakeScore=0;
 var newSnakeScore=parseInt(localStorage.getItem('snakeScore'));
 var SIScore=0;
@@ -38,7 +38,7 @@ window.onload= function (){
 
     let p3=document.getElementById('tic');
     p3.innerText=XOStreak+' wins in a row';
-    color("tic", XOStreak);
+    xocolor("tic", XOStreak);
 
     let p4=document.getElementById('snake');
     p4.innerText=snakeScore+' points';
@@ -77,4 +77,28 @@ function color(i, score){
     else
         return;        
 
+}
+function xocolor(i, score){
+    let p=document.getElementById(i);
+
+    if(score>50){
+            p.classList.add("gold");
+            return;
+    }        
+    else if (score>25){  
+            p.classList.add("prpl");
+            return;
+    }        
+    else if (score>15){
+        p.classList.add("blue");
+            return; 
+    }
+    else if(score>5){
+        p.classList.add("blue");
+        return;
+    }
+    else if(score>=0){
+        p.classList.add("gray");
+        return;
+    }
 }
