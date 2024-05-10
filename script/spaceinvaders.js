@@ -42,6 +42,10 @@ let bulletArray = [];
 let bulletVelocityY = -10; //bullet moving speed
 
 let score = 0;
+if(localStorage.getItem("SIscore")=="0" || localStorage.getItem("SIscore")==null){
+    localStorage.setItem("SIscore","0");
+}
+
 let gameOver = false;
 
 window.onload= startGame();
@@ -73,15 +77,17 @@ function startGame() {
 function restartGame(){
     if(gameOver==false)
       return;
-    window.sessionStorage.setItem('SIscore',score.toString());
+
+    if(score>parseInt(localStorage.getItem("SIscore"))){
+        window.localStorage.setItem('SIscore',score.toString());
+    }
     location.reload();
-}
+ }  
 
 function update() {
     requestAnimationFrame(update);
 
     if (gameOver) {
-        //window.localStorage.setItem('SIscore',score.toString());
         return;
     }
 
