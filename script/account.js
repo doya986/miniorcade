@@ -3,7 +3,7 @@ var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
 var BOScore=0;
 var newBOScore=parseInt(localStorage.getItem('BOscore'));
 //to save previous highest streak, we initially have it as 0
-if(localStorage.getItem("prevstreak")=="0" || localStorage.getItem("prevtreak")==null)
+if(localStorage.getItem("prevstreak")=="0" || localStorage.getItem("prevstreak")==null)
     localStorage.setItem("prevstreak", "0");
 var prevStreak=parseInt(localStorage.getItem("prevstreak"));
 
