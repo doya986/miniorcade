@@ -73,7 +73,7 @@ function startGame() {
 function restartGame(){
     if(gameOver==false)
       return;
-    window.localStorage.setItem('SIscore',score);
+    window.localStorage.setItem('SIscore',score.toString());
     location.reload();
 }
 
