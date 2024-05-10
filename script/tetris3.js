@@ -223,7 +223,7 @@ function getRandomInt(min, max) {
         }
       }
     }
-    context.font='10px orbitron';
+    context.font='15px orbitron';
     context.fillText(score, 1, 10);
     // draw the active tetromino
     if (tetromino) {
