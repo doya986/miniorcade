@@ -73,7 +73,6 @@ function startGame() {
 function restartGame(){
     if(gameOver==false)
       return;
-    localStorage.setItem('SIscore',score.toString());
     startGame();
 }
 
@@ -81,6 +80,7 @@ function update() {
     requestAnimationFrame(update);
 
     if (gameOver) {
+        window.localStorage.setItem('SIscore',score.toString());
         return;
     }
 
