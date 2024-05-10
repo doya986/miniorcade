@@ -122,14 +122,16 @@ function getRandomInt(min, max) {
   
     context.fillStyle = 'black';
     context.globalAlpha = 0.75;
-    context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+    context.fillRect(0, canvas.height / 2 - 20, canvas.width, 60);
   
     context.globalAlpha = 1;
     context.fillStyle = 'white';
     context.font = '13px orbitron';
     context.textAlign = 'center';
     context.textBaseline = 'middle';
-    context.fillText("GAME OVER! press 'Space' to restart", canvas.width / 2, canvas.height / 2);
+    context.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2);
+    context.fillText("press 'Space' to restart", canvas.width / 2, (canvas.height / 2)+20);
+
     window.sessionStorage.setItem('tetrisScore',score.toString());
   }
   
