@@ -1,4 +1,3 @@
-
 //board
 var blockSize = 25;
 var rows = 20;
@@ -21,6 +20,7 @@ img.src='styles/resources/food2.png';
 var foodX;
 var foodY;
 
+var score=0;
 var gameOver = false;
 
 window.onload = setGame();
@@ -38,6 +38,7 @@ function setGame() {
     setInterval(update, 1000/10); //100 milliseconds
 }
 function resetGame(){
+    window.localStorage.setItem('snakeScore',score.toString());
     location.reload(true);
 }
 function update() {
@@ -54,6 +55,7 @@ function update() {
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
+        score+=10*(snakeBody.length);
         placeFood();
     }
 
@@ -84,6 +86,10 @@ function update() {
             functionAlert();
         }
     }
+
+    context.font='15px orbitron';
+    context.fillStyle='#ffffff';
+    context.fillText(score, 10, 25);
 }
 
 function changeDirection(e) {
