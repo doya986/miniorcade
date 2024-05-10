@@ -1,3 +1,4 @@
+
 //board
 var blockSize = 25;
 var rows = 20;
@@ -21,6 +22,10 @@ var foodX;
 var foodY;
 
 var score=0;
+if(localStorage.getItem("snakeScore")==0 || localStorage.getItem("snakeScore")==null){
+    localStorage.setItem("snakeScore","0");
+}
+
 var gameOver = false;
 
 window.onload = setGame();
@@ -38,8 +43,11 @@ function setGame() {
     setInterval(update, 1000/10); //100 milliseconds
 }
 function resetGame(){
-    window.localStorage.setItem('snakeScore',score.toString());
+    if(score>parseInt(localStorage.getItem("snakeScore"))){
+        window.localStorage.setItem('snakeScore',score.toString());
+    }
     location.reload(true);
+    return;
 }
 function update() {
     if (gameOver) {
