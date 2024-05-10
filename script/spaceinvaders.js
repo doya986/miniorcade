@@ -80,7 +80,7 @@ function update() {
     requestAnimationFrame(update);
 
     if (gameOver) {
-        window.localStorage.setItem('SIscore',score.toString());
+        //window.localStorage.setItem('SIscore',score.toString());
         return;
     }
 
