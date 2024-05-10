@@ -38,7 +38,7 @@ function setGame() {
     setInterval(update, 1000/10); //100 milliseconds
 }
 function resetGame(){
-    window.localStorage.setItem('snakeScore',score.toString());
+    window.sessionStorage.setItem('snakeScore',score.toString());
     location.reload(true);
 }
 function update() {
