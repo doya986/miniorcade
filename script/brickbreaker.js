@@ -177,14 +177,14 @@ function restart(){
 }
 function moveLeft(){
         // player.x -= player.velocityX;
-    let nextplayerX = player.x - player.velocityX;
+    let nextplayerX = player.x - player.velocityX*3;
     if (!outOfBounds(nextplayerX)) {
         player.x = nextplayerX;
     }
 
 }
 function moveRight(){
-    let nextplayerX = player.x + player.velocityX;
+    let nextplayerX = player.x + player.velocityX*3;
     if (!outOfBounds(nextplayerX)) {
         player.x = nextplayerX;
     }
