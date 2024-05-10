@@ -130,7 +130,7 @@ function getRandomInt(min, max) {
     context.textAlign = 'center';
     context.textBaseline = 'middle';
     context.fillText("GAME OVER! press 'Space' to restart", canvas.width / 2, canvas.height / 2);
-    window.localStorage.setItem('tetrisScore',score.toString());
+    window.sessionStorage.setItem('tetrisScore',score.toString());
   }
   
   const canvas = document.getElementById('game');
