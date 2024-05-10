@@ -1,3 +1,6 @@
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
+
+// Use `localStorage` as you normally would now
 //board
 var blockSize = 25;
 var rows = 20;
@@ -38,7 +41,7 @@ function setGame() {
     setInterval(update, 1000/10); //100 milliseconds
 }
 function resetGame(){
-    window.sessionStorage.setItem('snakeScore',score.toString());
+    window.localStorage.setItem('snakeScore',score.toString());
     location.reload(true);
 }
 function update() {
