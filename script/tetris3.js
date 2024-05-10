@@ -132,7 +132,7 @@ function getRandomInt(min, max) {
     context.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2);
     context.fillText("press 'Space' to restart", canvas.width / 2, (canvas.height / 2)+20);
 
-    window.sessionStorage.setItem('tetrisScore',score.toString());
+    window.localStorage.setItem('tetrisScore',score.toString());
   }
   
   const canvas = document.getElementById('game');
@@ -227,6 +227,7 @@ function getRandomInt(min, max) {
     }
     context.font='15px orbitron';
     context.fillText(score, 1, 10);
+    context.fillStyle='#ffffff';  
     // draw the active tetromino
     if (tetromino) {
   
