@@ -16,3 +16,18 @@ p{
     font-size: small;
     text-align: center;
 }
+.gold{
+    color: rgb(223, 192, 13);
+}
+.prpl{
+    color: rgb(129, 12, 139);
+}
+.blue{
+    color: rgb(38, 38, 138);
+}
+.grn{
+    color: rgb(71, 158, 71);
+}
+.gray{
+    color: grey;
+}
