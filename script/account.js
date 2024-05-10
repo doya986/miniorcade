@@ -1,3 +1,6 @@
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
+
+// Use `localStorage` as you normally would now
 var tetrisScore=0;
 var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
 var BOScore=0;
@@ -5,7 +8,7 @@ var newBOScore=parseInt(localStorage.getItem('BOscore'));
 var XOStreak=0;
 var newXOStreak=0;
 var snakeScore=0;
-var newSnakeScore=parseInt(sessionStorage.getItem('snakeScore'));
+var newSnakeScore=parseInt(localStorage.getItem('snakeScore'));
 var SIScore=0;
 var newSIScore=parseInt(localStorage.getItem('SIscore'));
 
