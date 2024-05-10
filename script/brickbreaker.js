@@ -246,7 +246,7 @@ function resetGame() {
     }
     blockArray = [];
     blockRows = 3;
-    setBOScore(score);
+    window.localStorage.setItem('score', score.toString());
     score = 0;
     createBlocks();
 }
