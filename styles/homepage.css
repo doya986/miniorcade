@@ -31,13 +31,13 @@ hr{
 }
 #home-button{
     background-image: url(resources/homebutton.jpeg);
-    padding: 25px;
-    padding-left: 24px;
-    padding-bottom: 25px;
+    padding: 26px;
+    padding-left: 25px;
+    padding-bottom: 26px;
 }
 #games-button{
     background-image: url(resources/joystick2.jpg);
-    padding:24px;
+    padding:23px;
 }
 #confirm{
     display: none;
