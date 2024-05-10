@@ -45,6 +45,7 @@ let blockX = 15;
 let blockY = 45;
 
 let score = 0;
+
 let gameOver = false;
 
 window.onload = function() {
@@ -54,7 +55,7 @@ window.onload = function() {
     context = board.getContext("2d"); //used for drawing on the board
 
     //draw initial player
-    context.fillStyle="white";
+    context.fillStyle="skyblue";
     context.fillRect(player.x, player.y, player.width, player.height);
 
     requestAnimationFrame(update);
@@ -100,7 +101,8 @@ function update() {
     }
     else if (ball.y + ball.height >= boardHeight) {
         // if ball touches bottom of canvas
-        context.font = "20px sans-serif";
+        context.font = "15px orbitron";
+        context.fillStyle="#00ff00";
         context.fillText("Game Over: Press 'Space' / START to Restart", 50, 400);
         gameOver = true;
     }
@@ -167,6 +169,7 @@ function movePlayer(e) {
 }
 function restart(){
     if (gameOver) {
+        
         resetGame();
         console.log("RESET");
     }
@@ -246,7 +249,7 @@ function resetGame() {
     }
     blockArray = [];
     blockRows = 3;
-    window.localStorage.setItem('score', score.toString());
+    window.localStorage.setItem('BOscore', score.toString());
     score = 0;
     createBlocks();
 }
