@@ -6,6 +6,9 @@
 */
 
 // get a random integer between the range of [min,max]
+var score=0;
+
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -96,7 +99,7 @@ function getRandomInt(min, max) {
     // check for line clears starting from the bottom and working our way up
     for (let row = playfield.length - 1; row >= 0; ) {
       if (playfield[row].every(cell => !!cell)) {
-  
+        score+=150;
         // drop every row above this one
         for (let r = row; r >= 0; r--) {
           for (let c = 0; c < playfield[r].length; c++) {
@@ -123,10 +126,11 @@ function getRandomInt(min, max) {
   
     context.globalAlpha = 1;
     context.fillStyle = 'white';
-    context.font = '36px monospace';
+    context.font = '13px orbitron';
     context.textAlign = 'center';
     context.textBaseline = 'middle';
-    context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+    context.fillText("GAME OVER! press 'Space' to restart", canvas.width / 2, canvas.height / 2);
+    window.localStorage.setItem('tetrisScore',score.toString());
   }
   
   const canvas = document.getElementById('game');
@@ -219,7 +223,8 @@ function getRandomInt(min, max) {
         }
       }
     }
-  
+    context.font='10px orbitron';
+    context.fillText(score, 1, 10);
     // draw the active tetromino
     if (tetromino) {
   
@@ -249,8 +254,12 @@ function getRandomInt(min, max) {
     }
   }
   
+
   // listen to keyboard events to move the active tetromino
   document.addEventListener('keyup', function(e) {
+    if(e.code =='Space' && gameOver==true){
+      resetGame();
+    }
     if (gameOver) return;
   
     // left and right arrow keys (move)
@@ -285,6 +294,7 @@ function getRandomInt(min, max) {
   
       tetromino.row = row;
     }
+    
   });
   function goLeft(){
       const col = tetromino.col - 1;
@@ -317,6 +327,9 @@ function goDown(){
       }
   
       tetromino.row = row;
+}
+function resetGame(){
+  location.reload();
 }
   // start the game
   rAF = requestAnimationFrame(loop);
