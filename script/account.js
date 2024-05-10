@@ -1,34 +1,22 @@
-var tetrisScore=0;
-var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
-var BOScore=0;
-var newBOScore=parseInt(localStorage.getItem('BOscore'));
+var tetrisScore=parseInt(localStorage.getItem('tetrisScore'));
+
+var BOScore=parseInt(localStorage.getItem('BOscore'));
+
 if(localStorage.getItem("prevstreak")=="0" || localStorage.getItem("prevstreak")==null)
     localStorage.setItem("prevstreak", "0");
-
 var XOStreak=parseInt(localStorage.getItem("prevstreak"));
 var newXOStreak=parseInt(localStorage.getItem('wins'));
-var snakeScore=0;
-var newSnakeScore=parseInt(localStorage.getItem('snakeScore'));
-var SIScore=0;
-var newSIScore=parseInt(localStorage.getItem('SIscore'));
 
+var snakeScore=parseInt(localStorage.getItem('snakeScore'));
 
-if(newBOScore>BOScore)
-        BOScore=newBOScore;
+var SIScore=parseInt(localStorage.getItem('SIscore'));
 
-if(newTetrisScore>tetrisScore)
-    tetrisScore=newTetrisScore;
 
 if(newXOStreak>XOStreak){
     XOStreak=newXOStreak;
     localStorage.setItem("prevstreak", newXOStreak.toString());
 }
     
-if(newSnakeScore>snakeScore)
-    snakeScore=newSnakeScore;
-
-if(newSIScore>SIScore)
-    SIScore=newSIScore;
 
 window.onload= function (){
 
