@@ -73,6 +73,7 @@ function startGame() {
 function restartGame(){
     if(gameOver==false)
       return;
+    window.localStorage.setItem('SIscore',score.toString());
     startGame();
 }
 
@@ -108,6 +109,9 @@ function update() {
 
             if (alien.y >= ship.y) {
                 gameOver = true;
+                context.font="15px orbitron";
+                context.fillStyle="#00ff00"
+                context.fillText("Game Over: Press START to Restart", 50, 200);
             }
         }
     }
@@ -169,6 +173,10 @@ function moveShip(e) {
     }
     else if (e.code == "ArrowRight" && ship.x + shipVelocityX + ship.width <= board.width) {
         ship.x += shipVelocityX; //move right one tile
+    }
+    else if(e.code=="Space"){
+        if(gameOver==true)
+            restartGame();
     }
 }
 function moveLeft(){
