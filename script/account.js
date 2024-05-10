@@ -5,7 +5,7 @@ var newBOScore=parseInt(localStorage.getItem('BOscore'));
 var XOStreak=0;
 var newXOStreak=0;
 var snakeScore=0;
-var newSnakeScore=parseInt(localStorage.getItem('snakeScore'));
+var newSnakeScore=parseInt(sessionStorage.getItem('snakeScore'));
 var SIScore=0;
 var newSIScore=parseInt(localStorage.getItem('SIscore'));
 
