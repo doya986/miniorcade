@@ -1,6 +1,4 @@
-import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
 
-// Use `localStorage` as you normally would now
 var tetrisScore=0;
 var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
 var BOScore=0;
