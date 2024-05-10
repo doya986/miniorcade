@@ -1,11 +1,13 @@
-
 var tetrisScore=0;
 var newTetrisScore=parseInt(localStorage.getItem('tetrisScore'));
 var BOScore=0;
 var newBOScore=parseInt(localStorage.getItem('BOscore'));
-if(localStorage.getItem("winstreak")=="0" || localStorage.getItem("winstreak")==null)
-        localStorage.setItem("winstreak", "0");
-var XOStreak=parseInt(localStorage.getItem("winstreak"));
+//to save previous highest streak, we initially have it as 0
+if(localStorage.getItem("prevstreak")=="0" || localStorage.getItem("prevtreak")==null)
+    localStorage.setItem("prevstreak", "0");
+var prevStreak=parseInt(localStorage.getItem("prevstreak"));
+
+var XOStreak=0;
 var newXOStreak=parseInt(localStorage.getItem('wins'));
 var snakeScore=0;
 var newSnakeScore=parseInt(localStorage.getItem('snakeScore'));
@@ -19,10 +21,11 @@ if(newBOScore>BOScore)
 if(newTetrisScore>tetrisScore)
     tetrisScore=newTetrisScore;
 
-if(newXOStreak>XOStreak){
+//if new streak is bigger than current and previous streak
+if(newXOStreak>XOStreak && newXOStreak>prevStreak){
     XOStreak=newXOStreak;
-    localStorage.setItem("winstreak",XOStreak);
-}        
+    localStorage.setItem("prevstreak", XOStreak.toString());
+}
 
 if(newSnakeScore>snakeScore)
     snakeScore=newSnakeScore;
