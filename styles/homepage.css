@@ -37,7 +37,7 @@ hr{
 }
 #games-button{
     background-image: url(resources/joystick2.jpg);
-    padding:25px;
+    padding:24px;
 }
 #confirm{
     display: none;
