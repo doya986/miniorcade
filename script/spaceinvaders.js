@@ -166,7 +166,7 @@ function update() {
 
     //score
     context.fillStyle="white";
-    context.font="16px courier";
+    context.font="15px orbitron";
     context.fillText(score, 5, 20);
 }
 
