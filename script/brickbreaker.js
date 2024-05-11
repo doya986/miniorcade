@@ -137,7 +137,11 @@ function update() {
         blockRows = Math.min(blockRows + 1, blockMaxRows);
         createBlocks();
     }
-
+    
+    if(score>parseInt(localStorage.getItem("BOscore"))){    
+        window.localStorage.setItem('BOscore', score.toString());
+    }
+    
     //score
     context.font = "15px orbitron";
     context.fillText(score, 10, 25);
@@ -251,9 +255,6 @@ function resetGame() {
     }
     blockArray = [];
     blockRows = 3;
-    if(score>parseInt(localStorage.getItem("BOscore"))){    
-        window.localStorage.setItem('BOscore', score.toString());
-    }
     score = 0;
     createBlocks();
 }
