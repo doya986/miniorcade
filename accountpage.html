@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport", initial-scale="1.0">
+        <meta name="viewport", initial-scale=1.0">
         <title>miniorcade/account</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,14 @@
     <body>
         
         <header class="top-bar">
-            <button id="games-button" class="top-bar-buttons" onclick="pop()" title="View Game Menu"></button>
+            <button id="games-button" class="top-bar-buttons" onclick="pop()" 
+            title="View Game Menu"></button>
             
             <nav id="confirm">
                 <button id="back" class="yes">x</button>    
                 <div class="message">Select a Game</div>
                 <a href="miniotetris.html" target="_self">
                     <button id="menu-tetris" class="yes">
-                        <!--<img class="icons" src="styles/resources/tetrisicon.jpg">-->
                         tetris</button></a>
                 <br /><a href="miniobrickbreaker.html" target="_self">
                     <button id="menu-brick-breaker" class="yes">
@@ -36,21 +36,50 @@
                         space invaders</button></a>
                 <br />
             </nav>
-            <a href="Homepage.html"><button id="home-button" class="top-bar-buttons" title="Go to Home"></button></a>
-            <a href="accountpage.html" target="_self"><button id="account-button" class="top-bar-buttons" title="Go to Account"></button></a>
+            <a href="Homepage.html">
+                <button id="home-button" class="top-bar-buttons" title="Go to Home"></button></a>
+            <a href="accountpage.html" target="_self">
+                <button id="account-button" class="top-bar-buttons" title="Go to Account"></button></a>
             <hr />
         </header>
-        <main>
         <h1>your account</h1>
-        <div id="milestones">
-            <h2>game milestones</h2>
+
+        <aside>
+            <img id="pfp" src="styles/resources/cat.jpg"><br />
+            <button id="changepfp" onclick="changePFP()">
+                change profile picture
+                
+            </button>
+                <menu id="select-image">    
+                    <div class="prompt">Select picture</div>
+                        <option id="img1" class="img"
+                        onclick="document.getElementById('pfp')
+                        .setAttribute('src','styles/resources/cat.jpg')">
+                        </option>
+                    <br />
+                        <option id="img2" class="img"
+                        onclick="document.getElementById('pfp')
+                        .setAttribute('src','styles/resources/dog.jpg')">
+                        </option>
+                    <br />
+                        <option id="img3" class="img"
+                        onclick="document.getElementById('pfp')
+                        .setAttribute('src','styles/resources/rabbit.jpg')">
+                        </option>
+                </menu>
+        </aside>
+        
+        <main>
+            <aside id="milestones">
+            <h3>game milestones</h3>
             <h4>tetris: <p id="tet"></p><br />
                 break-out:<p id="BO"></p><br />
                 tictactoe:<p id="tic"></p><br />
                 snake:<p id="snake"></p><br />
                 spase invaders:<p id="space"></p>
             </h4>
-        </div>
+            
+            </aside>
         </main>
         <script src="script/account.js"></script>
         <script src="script/homepage.js"></script>
