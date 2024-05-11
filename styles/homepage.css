@@ -137,7 +137,9 @@ hr{
     font-size: small;
     color: #00ff00;
 }
-#sp-footer{
+#home-footer{
     bottom: -400px;
 }
-
+#sp-footer{
+    bottom: -200px
+}
