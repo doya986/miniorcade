@@ -39,13 +39,10 @@ p{
     3px 0 0 0 #000,
     0 -3px 0 0 #000,
     0 3px 0 0 #000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
     background-color: #000;
     padding: 15px;
     position: relative;
-    margin-left: 50%;
+    margin-left: 60%;
     margin-top: 5%;
 }
 #changepfp{
@@ -57,7 +54,7 @@ p{
     0 -2px 0 0 #000,
     0 2px 0 0 #000;
     padding: 5px;
-    margin-left: 50%;
+    margin-left: 60%;
     margin-top: 2%;
 }
 #select-image{
@@ -67,7 +64,7 @@ p{
     width: 20%;
     margin: 0px;
     position: fixed;
-    left: 65%; bottom: 10%;
+    left: 69.5%; bottom: 10%;
     padding: 20px 18px 18px;
     box-sizing: border-box;
     box-shadow: -2px 0 0 0 #000,
