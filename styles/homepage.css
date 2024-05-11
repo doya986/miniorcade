@@ -127,13 +127,17 @@ hr{
     padding-right: 20px;
     word-spacing: 59px;
 }
-#footer{
+.footer{
     width: 100%;
     background-color: #000000;
     position: absolute;
     left: 0;
-    bottom: -400px;
+    bottom: -100px;
     margin-bottom: 10px;
     font-size: small;
     color: #00ff00;
 }
+#home-footer{
+    bottom: -400px;
+}
+
