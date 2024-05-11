@@ -94,3 +94,12 @@ function xocolor(i, score){
         return;
     }
 }
+function changePFP(msg, myYes) {
+    var confirmBox = $("#select-image");
+    confirmBox.find(".prompt").text(msg);
+    confirmBox.find(".img").unbind().click(function() {
+        confirmBox.hide();
+     });
+     confirmBox.find(".img").click(myYes);
+     confirmBox.show();
+}
