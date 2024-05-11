@@ -6,6 +6,7 @@ body {
 
 #board {
     background-color: black;
+    border: 5px inset rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 #buttonBoard{
