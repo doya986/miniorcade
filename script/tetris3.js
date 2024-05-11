@@ -114,6 +114,9 @@ function getRandomInt(min, max) {
         row--;
       }
     }
+    if(score>parseInt(localStorage.getItem("tetrisScore"))){
+      window.localStorage.setItem('tetrisScore',score.toString());
+    }
   
     tetromino = getNextTetromino();
   }
@@ -134,9 +137,7 @@ function getRandomInt(min, max) {
     context.textBaseline = 'middle';
     context.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2);
     context.fillText("press 'Space' to restart", canvas.width / 2, (canvas.height / 2)+20);
-    if(score>parseInt(localStorage.getItem("tetrisScore"))){
-      window.localStorage.setItem('tetrisScore',score.toString());
-    }
+    
   }
   
   const canvas = document.getElementById('game');
