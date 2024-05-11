@@ -31,13 +31,13 @@ hr{
 }
 #home-button{
     background-image: url(resources/homebutton.jpeg);
-    padding: 26px;
-    padding-left: 25px;
-    padding-bottom: 26px;
+    padding: 25px;
+    padding-left: 24px;
+    padding-bottom: 25px;
 }
 #games-button{
     background-image: url(resources/joystick2.jpg);
-    padding:23px;
+    padding:24px;
 }
 #confirm{
     display: none;
@@ -127,7 +127,10 @@ hr{
     padding-right: 20px;
     word-spacing: 59px;
 }
-/*.icons{
-    height: 30px;
-    width: 30px;
-}*/
+footer{
+    position: fixed;
+    left: 45%;
+    bottom: 0;
+    margin-bottom: 40px;
+    font-size: x-small;
+}
