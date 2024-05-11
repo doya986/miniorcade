@@ -78,9 +78,6 @@ function restartGame(){
     if(gameOver==false)
       return;
 
-    if(score>parseInt(localStorage.getItem("SIscore"))){
-        window.localStorage.setItem('SIscore',score.toString());
-    }
     location.reload();
  }  
 
@@ -162,6 +159,10 @@ function update() {
         alienArray = [];
         bulletArray = [];
         createAliens();
+    }
+    
+    if(score>parseInt(localStorage.getItem("SIscore"))){
+        window.localStorage.setItem('SIscore',score.toString());
     }
 
     //score
