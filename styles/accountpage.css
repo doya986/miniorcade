@@ -3,29 +3,111 @@ body{
     text-align: center;
     text-transform: capitalize;
 }
-h2{
+h3{
+    margin-top: -30px;
     text-align: center;
 }
-
+h6{
+    margin-top: -20px;
+}
 #milestones{
+    width: 50%;
     text-align: left;
+    margin-top: -200px;
 }
 p{
     font-size: small;
     text-align: center;
 }
 .gold{
-    color: rgb(223, 192, 13);
+    color: #dfc00d;
 }
 .prpl{
-    color: rgb(129, 12, 139);
+    color: #810c8b;
 }
 .blue{
-    color: rgb(106, 106, 189);
+    color: #5a5ac2;
 }
 .grn{
-    color: rgb(71, 158, 71);
+    color: #479e47;
 }
 .gray{
-    color: grey;
+    color: #808080;
+}
+#pfp{
+    box-shadow: -3px 0 0 0 #000,
+    3px 0 0 0 #000,
+    0 -3px 0 0 #000,
+    0 3px 0 0 #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-color: #000;
+    padding: 15px;
+    position: relative;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+#changepfp{
+    font-family: orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10px;
+    background-color: #fff;
+    box-shadow: -2px 0 0 0 #000,
+    2px 0 0 0 #000,
+    0 -2px 0 0 #000,
+    0 2px 0 0 #000;
+    padding: 5px;
+    margin-left: 50%;
+    margin-top: 2%;
+}
+#select-image{
+    display: none;
+    background-color: #ffffff;
+    color: #000000;
+    width: 20%;
+    margin: 0px;
+    position: fixed;
+    left: 65%; bottom: 10%;
+    padding: 20px 18px 18px;
+    box-sizing: border-box;
+    box-shadow: -2px 0 0 0 #000,
+    2px 0 0 0 #000,
+    0 -2px 0 0 #000,
+    0 2px 0 0 #000;
+    text-align: center;
+    text-shadow: #000000;
+ }
+.img{
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 50px;
+    padding-top: 32px;
+    margin-bottom: 7px;
+    box-shadow: -2px 0 0 0 #000,
+    2px 0 0 0 #000,
+    0 -2px 0 0 #000,
+    0 2px 0 0 #000;
+    /*box-shadow: 3px 2px 5px #2a2a2a;*/
+    cursor: pointer;
+    transition:all 0.2s;
+}
+.img:hover{
+    opacity: 0.8;
+}
+.img:active{
+    width: -5%;
+}
+#select-image .prompt {
+    margin-bottom: 5%;
+}
+#img1{
+    background-image: url(resources/cat.jpg);
+}
+#img2{
+    background-image: url(resources/dog.jpg);
+}
+#img3{
+    background-image: url(resources/rabbit.jpg);
 }
