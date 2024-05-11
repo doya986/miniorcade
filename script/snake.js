@@ -43,9 +43,6 @@ function setGame() {
     setInterval(update, 1000/10); //100 milliseconds
 }
 function resetGame(){
-    if(score>parseInt(localStorage.getItem("snakeScore"))){
-        window.localStorage.setItem('snakeScore',score.toString());
-    }
     location.reload(true);
     return;
 }
@@ -93,6 +90,9 @@ function update() {
             gameOver = true;
             functionAlert();
         }
+    }
+    if(score>parseInt(localStorage.getItem("snakeScore"))){
+        window.localStorage.setItem('snakeScore',score.toString());
     }
 
     context.font='15px orbitron';
